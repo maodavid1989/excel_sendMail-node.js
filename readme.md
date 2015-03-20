@@ -1,5 +1,6 @@
 auto sendmail by parser excel by maodavid1989
 
-npm install node-xlsx
+parser excel field and automatic send notification by email
 
-npm install sendgrid
+library use <a href="https://github.com/mgcrea/node-xlsx">node-xlsx</a> and <a href="https://github.com/sendgrid/sendgrid-nodejs">sendgrid-nodejs</a>
+
