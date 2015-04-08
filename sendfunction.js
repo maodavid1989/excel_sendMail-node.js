@@ -1,12 +1,12 @@
 var credential = require('./credential.js'); //id and pw
 var sendgrid  = require('sendgrid')(credential.account, credential.password);
 var fs = require('fs'); 	//filestream
-var attachment ='./attachment/report.txt'; //檔案位置
+var attachment ='./attachment/context.xlsx'; //寄送檔案位置
 
-exports.sendMail=function sendMail(mail){
+exports.sendMail=function sendMail(mailaddress){
 	fs.readFile(attachment, function read(err, data) {
 		sendgrid.send({
-			to:       mail,
+			to:       mailaddress,
 			from:     'noreply@example.com',
 			subject:  'made by maodavid1989@hotmail.com',
 			text:     ' automatic deliver email program, send from maodavid ! ',
@@ -15,7 +15,7 @@ exports.sendMail=function sendMail(mail){
 			if (err) { 
 				return console.error(err); 
 			}
-			console.log('send email to '+ mail + ' success.');
+			console.log('send email to '+ mailaddress + ' success.');
 		});
 	});
 }
