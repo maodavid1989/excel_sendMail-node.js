@@ -1,7 +1,7 @@
 //account and password
 
 var user ={
-	account : 'maodavid1989',
-	password : 'al6mp4jo3'
+	account : 'account',
+	password : 'password'
 };
 module.exports = user;
